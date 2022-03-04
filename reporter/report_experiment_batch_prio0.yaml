@@ -122,7 +122,7 @@ datasets:
           - 0
 reports:
   time_vs_latency:
-    report_title: Real-time benchmark report prio 0
+    report_title: report_experiment_batch_prio0
     template_name: ./batch.html
     figures:
       - name: intra_latency_mean
