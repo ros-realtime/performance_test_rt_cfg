@@ -126,7 +126,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_mean_ms
+    y_range: latency_mean
     size:
       width: 900
       height: 540
@@ -139,7 +139,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_max_ms
+    y_range: latency_max
     size:
       width: 900
       height: 540
@@ -152,7 +152,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_min_ms
+    y_range: latency_min
     size:
       width: 900
       height: 540
@@ -165,7 +165,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_variance_ms
+    y_range: latency_variance
     size:
       width: 900
       height: 540
@@ -178,7 +178,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_mean_ms
+    y_range: latency_mean
     size:
       width: 900
       height: 540
@@ -191,7 +191,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_max_ms
+    y_range: latency_max
     size:
       width: 900
       height: 540
@@ -204,7 +204,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_min_ms
+    y_range: latency_min
     size:
       width: 900
       height: 540
@@ -217,7 +217,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_variance_ms
+    y_range: latency_variance
     size:
       width: 900
       height: 540
@@ -230,7 +230,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_mean_ms
+    y_range: latency_mean
     size:
       width: 900
       height: 540
@@ -242,7 +242,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_max_ms
+    y_range: latency_max
     size:
       width: 900
       height: 540
@@ -254,7 +254,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_min_ms
+    y_range: latency_min
     size:
       width: 900
       height: 540
@@ -266,7 +266,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_variance_ms
+    y_range: latency_variance
     size:
       width: 900
       height: 540
@@ -278,7 +278,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_mean_ms
+    y_range: latency_mean
     size:
       width: 900
       height: 540
@@ -290,7 +290,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_max_ms
+    y_range: latency_max
     size:
       width: 900
       height: 540
@@ -302,7 +302,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_min_ms
+    y_range: latency_min
     size:
       width: 900
       height: 540
@@ -314,7 +314,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_variance_ms
+    y_range: latency_variance
     size:
       width: 900
       height: 540
@@ -326,7 +326,7 @@ plots:
     x_axis_label: Time (seconds)
     y_axis_label: Latency (ms)
     x_range: T_experiment
-    y_range: latency_mean_ms
+    y_range: latency_mean
     size:
       width: 900
       height: 540
