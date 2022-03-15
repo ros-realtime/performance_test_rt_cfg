@@ -3,7 +3,7 @@ datasets:
   intra_sste_1_subs_prio90:
     name: Intra SSTE PRIO 90
     theme:
-      color: '#0000ff'
+      color: '#e41a1c'
     experiments:
       - com_mean:
           - rclcpp-static-single-threaded-executor
@@ -23,7 +23,7 @@ datasets:
   intra_ste_1_subs_prio90:
     name: Intra STE PRIO 90
     theme:
-      color: '#bf0000'
+      color: '#377eb8'
     experiments:
       - com_mean:
           - rclcpp-single-threaded-executor
@@ -43,7 +43,7 @@ datasets:
   intra_waitset_1_subs_prio90:
     name: Intra Waiset PRIO 90
     theme:
-      color: '#00ff00'
+      color: '#4daf4a'
     experiments:
       - com_mean:
           - rclcpp-waitset
@@ -63,7 +63,7 @@ datasets:
   udp_sste_1_subs_prio90:
     name: UDP SSTE PRIO 90
     theme:
-      color: '#bf0000'
+      color: '#DDCC77'
     experiments:
       - com_mean:
           - rclcpp-static-single-threaded-executor
@@ -83,7 +83,7 @@ datasets:
   udp_ste_1_subs_prio90:
     name: UDP STE PRIO 90
     theme:
-      color: '#0000ff'
+      color: '#ff7f00'
     experiments:
       - com_mean:
           - rclcpp-single-threaded-executor
@@ -103,7 +103,7 @@ datasets:
   udp_waitset_1_subs_prio90:
     name: UDP WAISET PRIO 90
     theme:
-      color: '#00ffff'
+      color: '#a65628'
     experiments:
       - com_mean:
           - rclcpp-waitset
