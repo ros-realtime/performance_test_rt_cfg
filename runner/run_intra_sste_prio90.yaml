@@ -15,7 +15,6 @@ experiments:
     history: KEEP_LAST
     history_depth: 16
     rt_prio:
-      - 0
       - 90
     max_runtime: 120
     ignore_seconds: 5

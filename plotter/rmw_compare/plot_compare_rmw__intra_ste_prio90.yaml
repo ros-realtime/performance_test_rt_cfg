@@ -1,12 +1,13 @@
 ---
 datasets:
-  intra_sste_1_subs_prio0:
-    name: Intra SSTE PRIO 0
+  dataset_rmw_fastrtps_cpp:
+    name: rmw_fastrtps_cpp
     theme:
-      color: '#e41a1c'
+      color: '#bf0000'
+    test_name: rmw_fastrtps_cpp       
     experiments:
       - com_mean:
-          - rclcpp-static-single-threaded-executor
+          - rclcpp-single-threaded-executor
         transport:
           - INTRA
         msg:
@@ -19,14 +20,15 @@ datasets:
         history: KEEP_LAST
         history_depth: 16
         rt_prio:
-          - 0
-  intra_sste_1_subs_prio90:
-    name: Intra SSTE PRIO 90
+          - 90
+  dataset_rmw_cyclonedds_cpp:
+    name: rmw_cyclonedds_cpp
     theme:
-      color: '#377eb8'
+      color: '#0000bf'
+    test_name: rmw_cyclonedds_cpp
     experiments:
       - com_mean:
-          - rclcpp-static-single-threaded-executor
+          - rclcpp-single-threaded-executor
         transport:
           - INTRA
         msg:
@@ -44,51 +46,51 @@ plots:
   - name: latency_mean
     title: Mean latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: latency_mean
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: latency_max
     title: Maximum latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: latency_max
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: latency_min
     title: Minimum latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: latency_min
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: latency_variance
     title: Latency variance over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: latency_variance
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: minor_page_faults
     title: Minor page faults
     x_axis_label: Time (seconds)
@@ -97,10 +99,10 @@ plots:
     y_range: sys_tracker_ru_minflt
     size:
       width: 900
-      height: 540
+      height: 600
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: major_page_faults
     title: Major page faults
     x_axis_label: Time (seconds)
@@ -111,8 +113,8 @@ plots:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: cpu_usage
     title: CPU Usage (%)
     x_axis_label: Time (seconds)
@@ -123,8 +125,8 @@ plots:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: memory_usage
     title: Memory Usage (MB)
     x_axis_label: Time (seconds)
@@ -135,101 +137,89 @@ plots:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
-  - name: pub_latency_mean
-    title: Mean latency over Time
-    x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
-    x_range: T_experiment
-    y_range: pub_loop_time_reserve_mean
-    size:
-      width: 900
-      height: 540
-    datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: pub_latency_max
     title: Maximum latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: pub_loop_time_reserve_max
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
-  - name: pub_latency_min
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
+  - name: pub_latency_minintra_sste_1_subs_prio0
     title: Minimum latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
-    y_range: pub_loop_time_reserve_min
+    y_range: pub_loop_time_reserve_max
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: pub_latency_variance
     title: Latency variance over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: pub_loop_time_reserve_variance
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: sub_latency_mean
     title: Mean latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: sub_loop_time_reserve_mean
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: sub_latency_max
     title: Maximum latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: sub_loop_time_reserve_max
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: sub_latency_min
     title: Minimum latency over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: sub_loop_time_reserve_min
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp
   - name: sub_latency_variance
     title: Latency variance over Time
     x_axis_label: Time (seconds)
-    y_axis_label: Latency (ms)
+    y_axis_label: Latency (s)
     x_range: T_experiment
     y_range: sub_loop_time_reserve_variance
     size:
       width: 900
       height: 540
     datasets:
-      - intra_sste_1_subs_prio0
-      - intra_sste_1_subs_prio90
+      - dataset_rmw_fastrtps_cpp
+      - dataset_rmw_cyclonedds_cpp

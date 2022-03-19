@@ -1,0 +1,171 @@
+---
+datasets:
+  dataset_sste:
+    name: static single threaded executor
+    theme:
+      color: '#bf0000'
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - UDP
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 90
+  dataset_ste:
+    name: single threaded executor
+    theme:
+      color: '#0000ff'
+    experiments:
+      - com_mean:
+          - rclcpp-single-threaded-executor
+        transport:
+          - UDP
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 90
+  dataset_waitset:
+    name: waiset
+    theme:
+      color: '#117733'
+    experiments:
+      - com_mean:
+          - rclcpp-waitset
+        transport:
+          - UDP
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 90
+reports:
+  time_vs_latency:
+    report_title: report_compare_com_mean__udp_prio90
+    template_name: ./single.html
+    figures:
+      - name: latency_mean
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (s)
+        x_range: T_experiment
+        y_range: latency_mean
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: latency_max
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (s)
+        x_range: T_experiment
+        y_range: latency_max
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: latency_min
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (s)
+        x_range: T_experiment
+        y_range: latency_min
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: latency_variance
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (s)
+        x_range: T_experiment
+        y_range: latency_variance
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: minor_page_faults
+        title: Minor page faults
+        x_axis_label: Time (seconds)
+        y_axis_label: Number of minor page faults
+        x_range: T_experiment
+        y_range: sys_tracker_ru_minflt
+        size:
+          width: 900
+          height: 600
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: major_page_faults
+        title: Major page faults
+        x_axis_label: Time (seconds)
+        y_axis_label: Number of major page faults
+        x_range: T_experiment
+        y_range: sys_tracker_ru_majflt
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: cpu_usage
+        title: CPU Usage (%)
+        x_axis_label: Time (seconds)
+        y_axis_label: CPU Usage (%)
+        x_range: T_experiment
+        y_range: cpu_usage_percent
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
+      - name: memory_usage
+        title: Memory Usage (MB)
+        x_axis_label: Time (seconds)
+        y_axis_label: Memory usage (MB)
+        x_range: T_experiment
+        y_range: ru_maxrss
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset_sste
+          - dataset_ste
+          - dataset_waitset
