@@ -17,8 +17,3 @@ ros2 run performance_report reporter --log-dir $log_dir/rmw_compare --configs ~/
 
 # Remove temp files
 rm -r $log_dir/rmw_compare/rmw_*
-
-
-
-
-
