@@ -41,7 +41,7 @@ datasets:
         rt_prio:
           - 90
   dataset_waitset:
-    name: waiset
+    name: waitset
     theme:
       color: '#117733'
     experiments:
