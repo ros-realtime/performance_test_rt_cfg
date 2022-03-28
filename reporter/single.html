@@ -28,18 +28,18 @@
     <h2 align="left">Latency metrics</h2>
     <div class="row">
         <div class="column">
-            {{ latency_mean|safe }}
+            {{ latency_mean_ms|safe }}
         </div>
         <div class="column">
-            {{ latency_max|safe }}
+            {{ latency_max_ms|safe }}
         </div>
     </div>
     <div class="row">
         <div class="column">
-            {{ latency_min|safe }}
+            {{ latency_min_ms|safe }}
         </div>
         <div class="column">
-            {{ latency_variance|safe }}
+            {{ latency_variance_ms|safe }}
         </div>
     </div>
     <h2 align="left">Sample metrics</h2>

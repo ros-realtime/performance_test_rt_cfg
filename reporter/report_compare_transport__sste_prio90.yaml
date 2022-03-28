@@ -45,48 +45,48 @@ reports:
     report_title: report_compare_transport__sste_prio90
     template_name: ./single.html
     figures:
-      - name: latency_mean
+      - name: latency_mean_ms
         title: Mean latency over Time
         x_axis_label: Time (seconds)
-        y_axis_label: Latency (s)
+        y_axis_label: Latency (ms)
         x_range: T_experiment
-        y_range: latency_mean
+        y_range: latency_mean_ms
         size:
           width: 900
           height: 540
         datasets:
           - dataset_intra
           - dataset_udp
-      - name: latency_max
+      - name: latency_max_ms
         title: Maximum latency over Time
         x_axis_label: Time (seconds)
-        y_axis_label: Latency (s)
+        y_axis_label: Latency (ms)
         x_range: T_experiment
-        y_range: latency_max
+        y_range: latency_max_ms
         size:
           width: 900
           height: 540
         datasets:
           - dataset_intra
           - dataset_udp
-      - name: latency_min
+      - name: latency_min_ms
         title: Minimum latency over Time
         x_axis_label: Time (seconds)
-        y_axis_label: Latency (s)
+        y_axis_label: Latency (ms)
         x_range: T_experiment
-        y_range: latency_min
+        y_range: latency_min_ms
         size:
           width: 900
           height: 540
         datasets:
           - dataset_intra
           - dataset_udp
-      - name: latency_variance
+      - name: latency_variance_ms
         title: Latency variance over Time
         x_axis_label: Time (seconds)
-        y_axis_label: Latency (s)
+        y_axis_label: Latency (ms)
         x_range: T_experiment
-        y_range: latency_variance
+        y_range: latency_variance_ms
         size:
           width: 900
           height: 540
