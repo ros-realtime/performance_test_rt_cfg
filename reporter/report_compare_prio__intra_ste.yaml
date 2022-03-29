@@ -41,8 +41,8 @@ datasets:
         rt_prio:
           - 90
 reports:
-  time_vs_latency_cpu_mem:
-    report_title: report_compare_prio__intra_ste
+  report_compare_prio__intra_ste:
+    report_title: Priority comparison. INTRA. Single Threaded Executor.
     template_name: ./single.html
     figures:
       - name: latency_mean_ms

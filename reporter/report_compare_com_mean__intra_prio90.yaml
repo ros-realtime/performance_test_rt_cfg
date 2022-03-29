@@ -61,8 +61,8 @@ datasets:
         rt_prio:
           - 90
 reports:
-  time_vs_latency:
-    report_title: report_compare_com_mean__intra_prio90
+  report_compare_com_mean__intra_prio90:
+    report_title: Communication mean comparison. INTRA. Priority 90.
     template_name: ./single.html
     figures:
       - name: latency_mean_ms

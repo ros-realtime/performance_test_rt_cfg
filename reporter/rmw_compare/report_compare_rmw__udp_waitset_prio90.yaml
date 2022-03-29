@@ -43,8 +43,9 @@ datasets:
         rt_prio:
           - 90
 reports:
-  time_vs_latency_cpu_mem:
+  report_compare_rmw__udp_waitset_prio90:
     report_title: report_compare_rmw__udp_waitset_prio90
+    report_title: RMW comparison. UDP. Waitset. Priority 90.
     template_name: ./single.html
     figures:
       - name: latency_mean_ms
