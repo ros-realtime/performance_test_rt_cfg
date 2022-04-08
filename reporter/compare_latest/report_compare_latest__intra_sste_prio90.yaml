@@ -1,0 +1,157 @@
+---
+datasets:
+  dataset1:
+    name: name1
+    theme:
+      color: '#bf0000'
+    test_name: name1       
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 90
+  dataset2:
+    name: name2
+    theme:
+      color: '#0000bf'
+    test_name: name2
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 90
+reports:
+  report_compare__intra_sste_prio90:
+    report_title: INTRA. Static Single Threaded Executor. Priority 90.
+    template_name: ./single.html
+    figures:
+      - name: latency_mean_ms
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_mean_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: latency_max_ms
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_max_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: latency_min_ms
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_min_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: latency_variance_ms
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_variance_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: minor_page_faults
+        title: Minor page faults
+        x_axis_label: Time (seconds)
+        y_axis_label: Number of minor page faults
+        x_range: T_experiment
+        y_range: sys_tracker_ru_minflt
+        size:
+          width: 900
+          height: 600
+        datasets:
+          - dataset1
+          - dataset2
+      - name: major_page_faults
+        title: Major page faults
+        x_axis_label: Time (seconds)
+        y_axis_label: Number of major page faults
+        x_range: T_experiment
+        y_range: sys_tracker_ru_majflt
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: cpu_usage
+        title: CPU Usage (%)
+        x_axis_label: Time (seconds)
+        y_axis_label: CPU Usage (%)
+        x_range: T_experiment
+        y_range: cpu_usage_percent
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: memory_usage
+        title: Memory Usage (MB)
+        x_axis_label: Time (seconds)
+        y_axis_label: Memory usage (MB)
+        x_range: T_experiment
+        y_range: ru_maxrss
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
+      - name: num_samples_lost
+        title: Number of samples lost
+        x_axis_label: Time (seconds)
+        y_axis_label: Number of samples lost
+        x_range: T_experiment
+        y_range: num_samples_lost
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - dataset1
+          - dataset2
